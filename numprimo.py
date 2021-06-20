@@ -1,22 +1,22 @@
 # coding: iso-8859-1 -*-
 repete = 'sim'
 while repete == 'sim':
-    numero = int(input('Digite qual número inteiro deseja saber se é primo: '))
+    numero = int(input('Digite qual nÃºmero inteiro deseja saber se Ã© primo: '))
     cont = 0
     lista= []
     for i in range(1,numero + 1):
         calc = numero % i
         if calc == 0:
-            print(f'Numero é divisível por {i}.')
+            print(f'Numero Ã© divisÃ­vel por {i}.')
             cont +=1
             lista.append(i)
     if cont == 2:
-        print(f'O número {numero} pode ser dividido {cont} vezes; pelos numeros {lista}. Ele é primo.')
+        print(f'O nÃºmero {numero} pode ser dividido {cont} vezes; pelos numeros {lista}. Ele Ã© primo.')
     else:
-        print(f'O número {numero} pode ser dividido {cont} vezes; pelos números {lista}. Ele não é primo')
-    repete = input('Gostaria de testar outro número? Digite sim ou não: \n').lower()
+        print(f'O nÃºmero {numero} pode ser dividido {cont} vezes; pelos nÃºmeros {lista}. Ele nÃ£o Ã© primo')
+    repete = input('Gostaria de testar outro nÃºmero? Digite sim ou nÃ£o: \n').lower()
 
-    if repete != 'sim' and repete != 'não':
-            repete = input('Opção inválida ? Digite sim ou não: \n').lower()
-print('Até a próxima!')
+    while repete != 'sim' and repete != 'nÃ£o':
+            repete = input('OpÃ§Ã£o invÃ¡lida ? Digite sim ou nÃ£o: \n').lower()
+print('AtÃ© a prÃ³xima!')
 
