@@ -6,7 +6,7 @@ jogar ='sim'
 print("_________________________")
 print("!!Bem-vindo ao Jokenpo!!")
 print("_________________________")
-resultado = ['Vitória do CPU!', 'Houve um empate!', 'O usuário venceu!']
+resultado = ['VitÃ³ria do CPU!', 'Houve um empate!', 'O usuÃ¡rio venceu!']
 jogadas = ['pedra', 'papel', 'tesoura']
 pontos_user = 0
 pontos_cpu = 0
@@ -15,7 +15,7 @@ while jogar == 'sim':
 
     user = input(f'Escolha uma jogada entre {jogadas}:  ').lower()
     if user not in jogadas:
-        user = input (f'As jogadas válidas são {jogadas}. Escolha uma entre elas: ').lower()
+        user = input (f'As jogadas vÃ¡lidas sÃ£o {jogadas}. Escolha uma entre elas: ').lower()
 
     print('Pronto?')
     cpu = random.choice(jogadas)
@@ -24,7 +24,7 @@ while jogar == 'sim':
     sleep(2)
     #               0        1         2
     #jogadas = ['pedra', 'papel', 'tesoura']
-    #resultado = ['Vitória do CPU!', 'Houve um empate!', 'O usuário venceu!']
+    #resultado = ['VitÃ³ria do CPU!', 'Houve um empate!', 'O usuÃ¡rio venceu!']
     if user in jogadas[0] and cpu in jogadas[1] or user in jogadas[1] and cpu in jogadas[2] or user in jogadas[2] and cpu in jogadas[0]:
         result =0
     elif user == cpu:
@@ -40,16 +40,16 @@ while jogar == 'sim':
         caso = resultado[2]
         pontos_user += 1
 
-    print(f'Usuário escolheu {user} e CPU {cpu}.{caso} Placar: Usuário {pontos_user} x CPU {pontos_cpu}.')
-    jogar = input('Gostaria de jogar novamente? Digite sim ou não:').lower()
-    if jogar != "sim" and jogar != "não":
-        jogar = input('Opção inválida! Gostaria de jogar novamente? Digite sim ou não: \n').lower()
+    print(f'UsuÃ¡rio escolheu {user} e CPU {cpu}.{caso} Placar: UsuÃ¡rio {pontos_user} x CPU {pontos_cpu}.')
+    jogar = input('Gostaria de jogar novamente? Digite sim ou nÃ£o:').lower()
+    while jogar != "sim" and jogar != "nÃ£o":
+        jogar = input('OpÃ§Ã£o invÃ¡lida! Gostaria de jogar novamente? Digite sim ou nÃ£o: \n').lower()
 
 if pontos_cpu > pontos_user:
-    print(f'Placar final: Usuário {pontos_user}x CPU {pontos_cpu}. Vitória do CPU. Melhor sorte na próxima vez!')
+    print(f'Placar final: UsuÃ¡rio {pontos_user}x CPU {pontos_cpu}. VitÃ³ria do CPU. Melhor sorte na prÃ³xima vez!')
 elif pontos_user > pontos_cpu:
-    print(f'Placar final: Usuário {pontos_user}x CPU {pontos_cpu}. Parabéns!!!! Você venceu!! Até a próxima')
+    print(f'Placar final: UsuÃ¡rio {pontos_user}x CPU {pontos_cpu}. ParabÃ©ns!!!! VocÃª venceu!! AtÃ© a prÃ³xima')
 else:
-    print(f'Placar final: Usuário {pontos_user}x CPU {pontos_cpu}. Desta vez empatamos! Até a próxima!')
+    print(f'Placar final: UsuÃ¡rio {pontos_user}x CPU {pontos_cpu}. Desta vez empatamos! AtÃ© a prÃ³xima!')
 
 
